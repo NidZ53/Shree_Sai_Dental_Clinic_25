@@ -1,0 +1,10 @@
+import React from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import App from './App.jsx';
+import FAQsPage from './FAQsPage.jsx';
+import './style.css';
+import './responsive.css';
+const root = document.getElementById('root');
+const Page = /^\/faqs(?:\/|\/index\.html)?$/.test(window.location.pathname) ? FAQsPage : App;
+if (root.hasChildNodes()) hydrateRoot(root, <Page />);
+else createRoot(root).render(<Page />);

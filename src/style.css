@@ -1,0 +1,71 @@
+@import "tailwindcss";
+:root{--ink:#111a20;--blue:#176ca8;--blue2:#dcecf5;--cream:#f6f1e8;--paper:#fffdf8;--line:#d9d3c9}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Work Sans",sans-serif}h1,h2,h3,p{margin-top:0}h1,h2{font-family:"Playfair Display",serif;font-weight:500;line-height:.98}em{color:var(--blue);font-weight:500}header{height:78px;display:flex;align-items:center;padding:0 5vw;border-bottom:1px solid var(--line);background:rgba(246,241,232,.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}.brand b{font-family:"Playfair Display",serif;font-size:18px}.brand small{display:block;font-size:8px;letter-spacing:2px}.tooth{font-size:38px;color:var(--blue);transform:rotate(180deg)}nav{margin:auto;display:flex;gap:30px}nav a,.textLink{color:inherit;text-decoration:none;font-size:13px}.call{border:1px solid var(--blue);border-radius:99px;padding:10px 15px;display:flex;gap:8px;align-items:center;color:var(--blue);text-decoration:none;font-size:13px}.call svg,.btn svg,.textLink svg,.contactCard a svg{width:16px}.menu,.mobile{display:none}.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;padding:7vw 5vw 4vw;gap:5vw;overflow:hidden}.eyebrow{color:var(--blue);font-size:11px;letter-spacing:3px;font-weight:600}.hero h1{font-size:clamp(52px,6vw,92px);max-width:850px;margin:25px 0}.lead{font-size:17px;line-height:1.7;max-width:650px;color:#4c5356}.actions{display:flex;gap:28px;align-items:center;margin-top:35px}.btn{display:inline-flex;align-items:center;gap:18px;background:var(--blue);color:white;text-decoration:none;padding:16px 22px;border-radius:99px;font-size:14px}.textLink{display:flex;align-items:center;gap:8px}.heroArt{position:relative;min-height:480px}.orb{position:absolute;inset:-20px -90px 0 0;background:linear-gradient(145deg,#d8e9f3,#93bdd7);border-radius:48% 0 0 48%;display:grid;place-items:center}.smile{font-size:160px;color:white;opacity:.75}.orb span{position:absolute;bottom:55px;letter-spacing:3px;font-size:11px}.float{position:absolute;bottom:15px;left:-35px;background:var(--paper);padding:20px 28px;border-radius:18px;box-shadow:0 20px 50px #38506022}.float span{display:block;color:#657177;font-size:12px;margin-top:4px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);padding:25px 5vw;background:var(--paper)}.stats div{padding:5px 30px;border-right:1px solid var(--line)}.stats div:first-child{padding-left:0}.stats div:last-child{border:0}.stats b{font-family:"Work Sans",sans-serif;font-size:30px}.stats span{display:block;color:#667074;font-size:11px;margin-top:5px}.doctor{display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw;padding:10vw 5vw;background:var(--paper)}.portrait{min-height:600px;border-radius:200px 200px 20px 20px;background:linear-gradient(160deg,#b9d2df,#edf2f1);display:flex;flex-direction:column;justify-content:center;align-items:center}.initials{font-family:"Work Sans",sans-serif;font-size:100px;color:white}.portrait span{font-size:10px;letter-spacing:4px;color:var(--blue)}.doctor h2,.sectionHead h2,.testimonials h2,.new h2,.contact h2{font-size:clamp(42px,5vw,72px)}.doctor h2 i{font-size:.55em;color:var(--blue)}.doctorStory{margin:40px 0}.doctorStory p{font-family:"Work Sans",sans-serif;font-size:clamp(24px,2.8vw,42px);line-height:1.18;color:#c5c2ba;transition:color .8s ease}.doctorStory p.lit{color:var(--ink)}.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}.pills span{border:1px solid var(--line);border-radius:99px;padding:8px 13px;font-size:11px}.services,.technology,.testimonials,.contact{padding:9vw 5vw}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:40px}.sectionHead>p{max-width:460px;line-height:1.6;color:#687074}.serviceGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:55px}.serviceGrid article{background:var(--paper);min-height:330px;padding:25px;border:1px solid #e7e0d6;border-radius:18px;display:flex;flex-direction:column;transition:.3s}.serviceGrid article:hover{transform:translateY(-8px);box-shadow:0 18px 40px #50442e12}.serviceGrid article>span{color:var(--blue);font-size:11px}.serviceGrid h3,.techGrid h3{font-family:"Playfair Display",serif;font-size:23px;margin-top:auto}.serviceGrid p,.techGrid p{color:#697276;font-size:13px;line-height:1.55}.serviceGrid svg{width:20px;color:var(--blue)}.technology{background:#15252d;color:white}.technology .sectionHead>p,.technology .techGrid p{color:#aebdc4}.techGrid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px;border:1px solid #ffffff24}.techGrid article{padding:38px;border:1px solid #ffffff18;min-height:230px}.techGrid svg{color:#6bb2dc}.techGrid h3{margin:45px 0 10px}.note{display:block;margin-top:20px;opacity:.6}.testimonials{background:var(--paper)}.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px}.quotes blockquote{margin:0;background:var(--cream);border-radius:18px;padding:32px}.quotes svg{color:var(--blue)}.quotes p{font-family:"Work Sans",sans-serif;font-size:21px;line-height:1.5;margin:25px 0}.quotes footer{font-size:11px;color:#6e7476}.new{padding:7vw 5vw;background:var(--blue);color:white;display:grid;grid-template-columns:1.3fr 1fr auto;align-items:end;gap:50px}.new em{color:#cdeafa}.new>p{line-height:1.7}.btn.light{background:white;color:var(--blue)}.contact{display:grid;grid-template-columns:.7fr 1.3fr;gap:6vw}.contactCard{background:var(--blue2);border-radius:24px;padding:35px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.contactCard>div{border-right:1px solid #b9ceda;padding-right:20px}.contactCard>div:last-child{border:0}.contactCard svg{color:var(--blue)}.contactCard h3{font-family:"Playfair Display",serif;font-size:19px;margin-top:16px}.contactCard p{font-size:12px;line-height:1.7}.contactCard a{display:flex;align-items:center;gap:8px;color:var(--blue);font-weight:600;font-size:12px}.contactCard .phone{font-size:18px;text-decoration:none}.foot{background:#0e1b22;color:#dbe4e8;padding:45px 5vw;display:flex;align-items:center;gap:40px}.foot p{margin:0;font-size:11px;color:#94a4ac}.foot p:last-child{margin-left:auto}
+@media(max-width:900px){nav,.call{display:none}.menu{display:block;margin-left:auto;border:0;background:none}.mobile{display:flex;position:absolute;top:78px;left:0;right:0;background:var(--paper);padding:25px;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}.mobile a{color:inherit;text-decoration:none}.hero{grid-template-columns:1fr;padding-top:70px}.heroArt{min-height:380px}.orb{inset:20px -80px 0 15vw}.stats{grid-template-columns:repeat(2,1fr);gap:20px}.stats div{border:0;padding:5px 0}.doctor{grid-template-columns:1fr}.portrait{min-height:450px}.serviceGrid{grid-template-columns:repeat(2,1fr)}.techGrid{grid-template-columns:repeat(2,1fr)}.new{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.contactCard{grid-template-columns:1fr}.contactCard>div{border-right:0;border-bottom:1px solid #b9ceda;padding-bottom:20px}.quotes{grid-template-columns:1fr}.foot{flex-wrap:wrap}.foot p:last-child{margin-left:0}}
+@media(max-width:560px){header{height:68px}.brand b{font-size:15px}.brand small{letter-spacing:1px}.mobile{top:68px}.hero{padding:55px 22px 30px}.hero h1{font-size:49px}.lead{font-size:15px}.actions{align-items:flex-start;flex-direction:column}.heroArt{min-height:300px}.float{left:0}.stats,.doctor,.services,.technology,.testimonials,.contact,.new{padding-left:22px;padding-right:22px}.doctor{padding-top:80px;padding-bottom:80px}.portrait{min-height:360px}.initials{font-size:75px}.doctorStory p{font-size:27px}.sectionHead{display:block}.serviceGrid,.techGrid{grid-template-columns:1fr}.serviceGrid article{min-height:260px}.contactCard{padding:25px}.foot{padding:35px 22px;display:block}.foot p{margin-top:20px}.stats{padding:20px 22px}.stats b{font-size:25px}}
+
+/* About section typography */
+.doctor{font-weight:400}
+.doctor .eyebrow,.doctor .pills,.doctor .btn{font-weight:400}
+.doctor h2{font-weight:700}
+.doctorStory p{font-family:"Work Sans",sans-serif;font-size:clamp(17px,1.5vw,20px);font-weight:400;line-height:1.7}
+
+/* Shared typography, including controls and emphasis. */
+body{font-optical-sizing:auto;font-weight:400;font-style:normal}
+button,input,select,textarea{font-family:"Work Sans",sans-serif}
+em,i{font-style:normal}
+
+/* Preserve the original italic emphasis in headings. */
+h1 em,h2 em,h3 em,h1 i,h2 i,h3 i{font-style:italic}
+
+/* Transparent tooth artwork for the hero. */
+.heroArt{display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;padding:0 0 72px;align-self:center}
+.heroTooth{display:block;width:100%;height:auto;max-width:620px;filter:drop-shadow(0 20px 24px #38506018)}
+.heroArt .float{left:50%;bottom:0;transform:translateX(-50%);width:max-content;max-width:100%;text-align:center}
+@media(max-width:900px){.heroArt{width:100%;max-width:560px;margin:20px auto 0}}
+@media(max-width:560px){.heroArt{margin-top:16px;padding-bottom:80px}.heroArt .float{padding:16px 22px}}
+
+/* Hero without badge and animated statistics. */
+.heroArt{padding-bottom:0}
+.stats .counterDigits{display:inline;color:inherit;font:inherit;margin:0;font-variant-numeric:tabular-nums}
+.stats .ratingValue{display:flex;align-items:center;gap:5px;padding:0;border:0}
+.stats .ratingStar{display:inline;color:#d4a017;font-size:30px;line-height:1;margin:0}
+@media(max-width:560px){.stats .ratingStar{font-size:25px}}
+
+/* Customer feedback cards. */
+.reviewStars{color:#b8860b;letter-spacing:2px}.reviewText{white-space:pre-wrap;overflow-wrap:anywhere}.reviewsLink{margin-top:28px}.reviewsIntro{max-width:600px;margin:0 auto;color:#596368;line-height:1.7}.customerQuotes blockquote{display:flex;flex-direction:column;align-items:center}.customerQuotes .reviewStars{margin-top:20px}.customerQuotes .reviewText{flex:1}.customerQuotes footer{display:flex;flex-direction:column;gap:12px}.customerQuotes cite{font-style:normal;font-size:14px;font-weight:600;color:var(--ink)}.reviewAvatar{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--blue2);color:var(--blue);font-size:18px;font-weight:600}.reviewsEmpty{max-width:600px;margin:32px auto 0;padding:32px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}.reviewsEmpty>svg{width:36px;height:36px;color:var(--blue);margin-bottom:16px}.reviewsEmpty h3{font-family:"Playfair Display",serif;font-size:26px;margin-bottom:12px}.reviewsEmpty p{line-height:1.7;color:#596368;margin-bottom:0}
+
+/* Doctor portrait, fitted without stretching or cropping the face. */
+.doctor .portrait{position:relative;display:block;min-height:0;aspect-ratio:3/4;align-self:start;overflow:hidden;background:#fff}
+.doctorPhoto{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.doctor .portrait>span{position:absolute;bottom:0;left:0;right:0;padding:24px 12px;text-align:center;letter-spacing:2px;background:linear-gradient(transparent,rgba(255,255,255,.96))}
+@media(max-width:900px){.doctor .portrait{width:100%;max-width:480px;justify-self:center}}
+
+/* Service categories with readable treatment lists. */
+.serviceGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.serviceGrid article{min-height:0;padding:28px}
+.serviceGrid h3{margin:24px 0 18px;line-height:1.2}
+.serviceGrid ul{list-style:disc;margin:0;padding-left:20px;color:#596368;font-size:14px;line-height:1.65}
+.serviceGrid li+li{margin-top:12px}
+.serviceGrid li::marker{color:var(--blue)}
+@media(max-width:900px){.serviceGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.serviceGrid{grid-template-columns:1fr}}
+
+.stats .qualifications{display:flex;align-items:baseline;gap:8px 12px;flex-wrap:wrap}
+.stats .qualifications small{font-size:15px;font-weight:500;line-height:1.4}
+
+.contactCard .whatsappLink{margin-top:20px;color:#146c43;line-height:1.5;text-decoration:none;align-items:flex-start}
+.contactCard .whatsappLink svg{flex-shrink:0;color:inherit}
+.contactCard .whatsappLink:hover{text-decoration:underline}
+
+/* Keep section headings visible below the sticky navigation. */
+section[id]{scroll-margin-top:96px}
+@media(max-width:560px){section[id]{scroll-margin-top:84px}}
+
+/* Frame the supplied logo without changing its source file. */
+.brand .clinicLogo{display:block;position:relative;width:100px;height:48px;overflow:hidden;flex-shrink:0;border-radius:4px}
+.clinicLogo img{position:absolute;display:block;width:166.667%;max-width:none;height:auto;left:-36%;top:-135%}
+@media(min-width:901px) and (max-width:1150px){header{padding-inline:3vw}nav{gap:14px}nav a{font-size:12px}}
+@media(max-width:560px){.brand{gap:8px}.brand .clinicLogo{width:75px;height:36px}}
+
+/* Transparent logo uses its own framing, with no background or clipping. */
+.clinicLogo img{position:static;width:100%;height:100%;max-width:100%;object-fit:contain}
