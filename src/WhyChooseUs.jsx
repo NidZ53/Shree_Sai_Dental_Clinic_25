@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { BadgeCheck, HeartHandshake, MessageCircle, ScanLine } from 'lucide-react';
+import { BadgeCheck, HeartHandshake, Wallet, ScanLine } from 'lucide-react';
 
 const pages = [
   [
-    { Icon: MessageCircle, title: 'Personalized Experience', text: 'Every smile is different. We take time to understand your concerns, answer your questions, and explain your treatment options in plain language.' },
+    { Icon: Wallet, title: 'Affordable Dental Care', text: 'Explore treatment options suited to your needs and budget. We take time to understand your concerns and explain treatment costs clearly, so you can make an informed decision about your care.' },
     { Icon: HeartHandshake, title: 'Comfort Comes First', text: 'A calm chairside manner and a gentle approach help you feel at ease. We guide you through each step, with time to ask questions along the way.' },
   ],
   [
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
     <div className="whyChooseIntro">
       <div>
         <p className="eyebrow">THE SHREE SAINATH APPROACH</p>
-        <h2 id="why-choose-heading">Why Patients<br/>Choose <em>Us.</em></h2>
+        <h2 id="why-choose-heading">Why Patients{' '}<br/>Choose <em>Us.</em></h2>
       </div>
       <div className="whyChooseControls">
         <div className="whyChooseArrows">

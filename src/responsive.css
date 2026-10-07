@@ -108,7 +108,8 @@ main{text-align:center}
 .actions,.pills,.reviewSummary{justify-content:center;align-items:center}
 .sectionHead{align-items:center}
 .serviceGrid article{align-items:center}
-.serviceGrid ul{width:100%;padding-left:0;list-style-position:inside;text-align:center}
+main ul,main ol{text-align:left}
+.serviceGrid ul{width:100%;padding-left:20px;list-style-position:outside;text-align:left}
 .techGrid article>svg,.quotes blockquote>svg,.contactCard>div>svg{display:block;margin-inline:auto}
 .stats>div,.stats>div:first-child{padding-inline:24px}
 .stats .qualifications{align-items:center}
@@ -136,7 +137,7 @@ main{text-align:center}
 .implantCopy h2{font-size:clamp(30px,2.7vw,44px);line-height:1.3;margin-bottom:28px}
 .implantCopy h2 span{color:#00a5b9}
 .implantCopy>p{font-size:17px;line-height:1.8;color:#50676e;margin-bottom:30px}
-.implantCopy ul{padding:0;margin:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+.implantCopy ul{padding:0;margin:0;list-style:none;display:flex;flex-direction:column;gap:18px;text-align:left}
 .implantCopy li{display:flex;align-items:flex-start;gap:12px;font-size:17px;line-height:1.5;color:#395762}
 .implantCopy li svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;color:#103442}
 .implantDiagram{position:relative;margin:0}
@@ -153,17 +154,23 @@ main{text-align:center}
 @media(max-width:1100px){
   .implantSection{grid-template-columns:1fr;gap:36px}
   .implantCopy{text-align:center;max-width:720px;justify-self:center}
-  .implantCopy li{justify-content:center}
+  .implantCopy li{justify-content:flex-start}
   .implantDiagram{width:100%;max-width:760px;justify-self:center}
 }
 @media(max-width:640px){
   .implantSection{padding-block:56px}
   .implantCopy h2{font-size:30px}
   .implantCopy li{font-size:16px}
-  .implantDiagram>img{width:100%;max-width:380px;margin-inline:auto}
-  .implantDiagram dl{display:flex;flex-direction:column;gap:20px;margin-top:24px;text-align:center}
-  .implantDiagram dl>div{position:static}
-  .implantDiagram dl>div::before,.implantDiagram dl>div::after{display:none}
+  .implantDiagram{max-width:480px}
+  .implantDiagram>img{width:60%}
+  .implantDiagram dl>div{left:65%;text-align:left}
+  .implantDiagram dl>div:nth-child(1){top:5%}
+  .implantDiagram dl>div:nth-child(2){top:38%}
+  .implantDiagram dl>div:nth-child(3){top:71%}
+  .implantDiagram dt{font-size:clamp(11px,3vw,15px);letter-spacing:.5px}
+  .implantDiagram dd{font-size:clamp(10px,2.7vw,13px);line-height:1.4;margin-top:4px}
+  .implantDiagram dl>div::before{right:calc(100% + 6px);top:8px;width:clamp(20px,7vw,40px)}
+  .implantDiagram dl>div::after{right:calc(100% + 6px + clamp(20px,7vw,40px));top:5px;width:7px;height:7px}
 }
 /* Restore the footer layout from before the site-wide centering. */
 .foot{text-align:left;justify-content:flex-start;align-items:center}
