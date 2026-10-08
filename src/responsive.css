@@ -179,6 +179,11 @@ main ul,main ol{text-align:left}
 
 /* Consistent framing for the six supplied service illustrations. */
 .serviceGrid .serviceImage{display:block;width:120px;height:100px;max-width:100%;object-fit:contain;margin:20px auto 0;mix-blend-mode:multiply}
+@media(max-width:640px){
+  .services{text-align:left}
+  .services .sectionHead,.serviceGrid article{align-items:flex-start}
+  .serviceGrid .serviceImage{margin-inline:0}
+}
 
 /* Equipment-backed technology cards inspired by the supplied reference. */
 .technology{background:#13262d;padding-block:64px}
