@@ -67,6 +67,6 @@ export default function PatientReviews() {
       {reviews.map((review, index) => <ReviewCard key={review.name} review={review} index={index} />)}
       {reviews.map((review, index) => <div className="patientReviewDuplicate" aria-hidden="true" key={'repeat-' + review.name}><ReviewCard review={review} index={index + reviews.length} duplicate /></div>)}
     </div>
-    <p className="patientReviewsNote">Selected reviews reproduced from Google. Individual patient experiences may vary.</p>
+  
   </section>;
 }
