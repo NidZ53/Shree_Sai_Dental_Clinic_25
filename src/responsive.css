@@ -274,3 +274,16 @@ main ul,main ol{text-align:left}
 .technology .techGrid article{box-shadow:none;border-color:#ffffff26}
 .technology .techGrid article:hover{box-shadow:none;border-color:#73bbd4}
 @media(max-width:640px){.heroPortrait{max-width:360px}.serviceGrid .serviceImage{height:130px}}
+/* Original header typography, with an italic clinic subtitle. */
+header{justify-content:space-between}
+header nav{gap:clamp(10px,1.2vw,20px)}
+@media(max-width:1250px){header nav,header .call{display:none}header .menu{display:block;margin-left:auto}header .mobile{display:flex}}
+
+
+
+header .headerClinicName{text-align:left}header .headerClinicName small{font-style:normal}
+/* Compact, left-aligned clinic name. */
+header .headerClinicName{display:grid;gap:3px;width:auto;text-align:left}
+header .headerClinicName b{font-size:14px;line-height:1.3;white-space:nowrap}
+header .headerClinicName small{width:auto;min-width:0;font-size:11px;line-height:1.3;letter-spacing:0;font-style:normal;white-space:nowrap;text-align:left}
+@media(max-width:360px){header .headerClinicName b{font-size:12px}header .headerClinicName small{font-size:10px}}
