@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, ArrowRight } from 'lucide-react';
 
-const navigation=[{"id":"about-us","label":"About Us"},{"id":"dental-services","label":"Dental Services"},{"id":"dental-technology","label":"Technology"},{"id":"why-choose-us","label":"Why Choose Us"},{"id":"contact-us","label":"Contact Us"}];
+const navigation=[{"id":"about-us","label":"About Us"},{"id":"dental-services","label":"Dental Services"},{"id":"dental-technology","label":"Technology"},{"id":"why-choose-us","label":"Why Choose Us"},{"id":"patient-reviews","label":"Reviews"},{"id":"contact-us","label":"Contact Us"}];
 
 export function SiteHeader({ homePrefix = '' }) {
   const [open, setOpen] = useState(false);
@@ -13,5 +13,5 @@ export function AppointmentSection() {
 }
 
 export function SiteFooter() {
-  return <footer className="foot"><div className="brand"><span className="clinicLogo"><img src="/images/logo-white-transparent.webp" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="400" height="200" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></div><p>Gentle, modern dentistry in Dhankawadi, Pune.</p><p>© 2026 Shree Sainath Hospital Dental Clinic. All rights reserved.</p></footer>;
+  return <footer className="foot"><div className="brand"><span className="clinicLogo"><img src="/images/logo-white-transparent.webp" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="400" height="200" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></div><p>Gentle, modern dentistry in Dhankawadi, Pune.</p><p>© 2026 Shree Sainath Hospital Dental Clinic. All rights reserved.</p><a className="privacyFooterLink" href="/privacy-policy/">Privacy Policy</a></footer>;
 }

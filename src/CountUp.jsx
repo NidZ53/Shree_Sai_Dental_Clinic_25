@@ -21,8 +21,8 @@ export default function CountUp({ value, decimals = 0, suffix = '' }) {
       let startTime;
       const tick = time => {
         startTime ??= time;
-        const progress = Math.min((time - startTime) / 1500, 1);
-        setDisplay(progress === 1 ? value : value * (1 - Math.pow(1 - progress, 3)));
+        const progress = Math.min((time - startTime) / 100, 1);
+        setDisplay(progress === 1 ? value : 1 + (value - 1) * (1 - Math.pow(1 - progress, 3)));
         if (progress < 1) frame = requestAnimationFrame(tick);
       };
       frame = requestAnimationFrame(tick);
@@ -30,7 +30,7 @@ export default function CountUp({ value, decimals = 0, suffix = '' }) {
     const onPreferenceChange = () => { if (preference.matches) finish(); };
     if (preference.matches) finish();
     else {
-      setDisplay(0);
+      setDisplay(1);
       if ('IntersectionObserver' in window) {
         observer = new IntersectionObserver(entries => {
           if (entries.some(entry => entry.isIntersecting)) { start(); observer.disconnect(); }

@@ -1,0 +1,44 @@
+.patientReviews{padding-block:clamp(48px,6vw,88px);background:var(--paper);text-align:left}
+.patientReviewsHeading{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-bottom:36px}
+.patientReviewsHeading h2{font-size:clamp(36px,4vw,60px);line-height:1.1;margin-bottom:0}
+.patientReviewsHeading>p{max-width:380px;line-height:1.8;color:#596368;margin:0}
+.patientReviewsTrack{--reviews-visible:5;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 0 16px;align-items:stretch}
+.patientReviewsTrack::-webkit-scrollbar{display:none}
+.patientReviewCard{flex:0 0 calc((100% - 64px)/5);min-width:0;height:380px;display:flex;flex-direction:column;padding:22px 18px;background:#fff;border:1px solid #dfe5e6;border-radius:16px;scroll-snap-align:start;box-shadow:0 4px 12px #17242c05;text-align:left}
+.patientReviewAuthor{display:flex;align-items:center;gap:10px;min-height:52px}
+.patientReviewAuthor>div{min-width:0}
+.patientReviewAuthor h3{font-family:"Work Sans",sans-serif;font-size:13px;line-height:1.5;font-weight:600;margin:0;overflow-wrap:anywhere}
+.patientReviewAvatar{width:36px;height:36px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;background:#e6eff6;color:#215779}
+.avatarTone1{background:#e8eee4;color:#426044}.avatarTone2{background:#f5e8df;color:#865b39}
+.patientReviewSource{font-size:11px;color:#647177;line-height:1.5}
+.patientReviewStars{display:flex;gap:3px;margin:20px 0 16px;color:#b57c16}
+.patientReviewStars svg{width:15px;height:15px;fill:currentColor;stroke-width:1}
+.patientReviewText{margin:0;min-height:0;flex:1;overflow:hidden}
+.patientReviewText p{font-size:13px;line-height:1.8;color:#46545d;margin:0;white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden}
+.patientReviewText.expanded{overflow-y:auto;overscroll-behavior:contain;padding-right:6px}
+.patientReviewText.expanded p{display:block;overflow:visible}
+.reviewReadMore{border:0;background:none;padding:10px 0 0;text-align:left;font:600 12px "Work Sans",sans-serif;color:var(--blue);cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.patientReviewFooter{border-top:1px solid #e9eded;margin-top:16px;padding-top:14px;font-size:10px;letter-spacing:.5px;color:#718087}
+.patientReviewsControls{display:flex;gap:24px;align-items:center;margin-top:12px}
+.patientReviewsControls>p{font-size:12px;color:#596368;white-space:nowrap;margin:0}
+.patientReviewsControls input{flex:1;min-width:0;max-width:420px;accent-color:var(--blue);cursor:pointer;height:24px}
+.patientReviewsArrows{display:flex;gap:10px;margin-left:auto}
+.patientReviewsArrows button{display:grid;place-items:center;width:44px;height:44px;background:transparent;border:1px solid #b9ccd7;border-radius:50%;color:var(--blue);cursor:pointer}
+.patientReviewsArrows button:disabled{opacity:.35;cursor:default}
+.patientReviewsArrows button:not(:disabled):hover{background:var(--blue2)}
+.patientReviewsArrows svg{width:18px;height:18px}
+.patientReviews :focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.patientReviewsNote{font-size:11px;line-height:1.6;color:#718087;margin:20px 0 0}
+@media(max-width:1199px){.patientReviewsTrack{--reviews-visible:3}.patientReviewCard{flex-basis:calc((100% - 32px)/3)}}
+@media(max-width:800px){.patientReviewsHeading{display:block}.patientReviewsHeading>p{margin-top:22px;max-width:560px}.patientReviewsTrack{--reviews-visible:2}.patientReviewCard{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:520px){.patientReviewsTrack{--reviews-visible:1}.patientReviewCard{flex-basis:100%;padding:24px;height:360px}.patientReviewsControls{gap:12px;flex-wrap:wrap}.patientReviewsControls input{max-width:none}.patientReviewAuthor h3{font-size:15px}.patientReviewText p{font-size:14px}.patientReviewsNote{max-width:300px}}
+
+.patientReviewFooter{display:flex;align-items:center;gap:6px;color:var(--blue);text-decoration:none}.patientReviewFooter svg{width:13px;height:13px;flex-shrink:0}.patientReviewFooter:hover{text-decoration:underline;text-underline-offset:3px}
+/* Continuous review ribbon, with manual scrolling available while paused. */
+.patientReviewsTrack{position:relative;scroll-snap-type:none;overflow-anchor:none;scroll-behavior:auto}
+.patientReviewDuplicate{flex:0 0 calc((100% - 64px)/5);min-width:0;display:flex}
+.patientReviewDuplicate .patientReviewCard{flex:1; width:100%}
+@media(max-width:1199px){.patientReviewDuplicate{flex-basis:calc((100% - 32px)/3)}}
+@media(max-width:800px){.patientReviewDuplicate{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:520px){.patientReviewDuplicate{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.patientReviewDuplicate{display:none}.patientReviewsTrack{scrollbar-width:thin}}

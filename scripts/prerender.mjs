@@ -81,6 +81,22 @@ try {
   if ((markup.match(/<details>/g) || []).length !== 5 || !markup.includes('href="/faqs/"') || (faqMarkup.match(/<details>/g) || []).length !== 17) throw new Error('FAQ page validation failed.');
   await mkdir('dist/faqs', { recursive: true });
   await writeFile('dist/faqs/index.html', faqHtml);
+  const { default: PrivacyPolicy } = await server.ssrLoadModule('/src/PrivacyPolicy.jsx');
+  const privacyTitle = 'Privacy Policy | Shree Sainath Hospital Dental Clinic';
+  const privacyDescription = 'How the clinic handles website information, enquiries, patient reviews and optional analytics.';
+  let privacyHtml = template
+    .replace('<div id="root"></div>', () => '<div id="root">' + renderToString(createElement(PrivacyPolicy)) + '</div>')
+    .replace(/<title>.*?<\/title>/, '<title>' + privacyTitle + '</title>')
+    .replace(/(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*/g, '$1' + privacyTitle)
+    .replace(/(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*/g, '$1' + privacyDescription);
+  if (siteUrl) {
+    const privacyUrl = escape(siteUrl + 'privacy-policy/');
+    privacyHtml = privacyHtml.replace('</head>', '<link rel="canonical" href="' + privacyUrl + '"/><meta property="og:url" content="' + privacyUrl + '"/></head>');
+    const sitemap = await readFile('dist/sitemap.xml', 'utf8');
+    await writeFile('dist/sitemap.xml', sitemap.replace('</urlset>', '<url><loc>' + privacyUrl + '</loc></url></urlset>'));
+  }
+  await mkdir('dist/privacy-policy', { recursive: true });
+  await writeFile('dist/privacy-policy/index.html', privacyHtml);
   await writeFile('dist/robots.txt', robots);
   if ((markup.match(/patientlogin.php/g) || []).length !== 3 || !markup.includes('<h1>') || !markup.includes('Dhankawadi')) throw new Error('Pre-render validation failed.');
   console.log('Pre-rendered clinic content and verified all three booking links.');
