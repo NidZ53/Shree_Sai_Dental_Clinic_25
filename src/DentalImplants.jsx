@@ -21,7 +21,7 @@ export default function DentalImplants() {
       <ul>{benefits.map(benefit => <li key={benefit}><CircleCheck aria-hidden="true"/><span>{benefit}</span></li>)}</ul>
     </div>
     <figure className="implantDiagram">
-      <img src="/images/dental-implant.png" alt="Cutaway illustration showing a crown above an abutment and a titanium implant anchored in the jawbone" width="1306" height="1205" loading="lazy" decoding="async"/>
+      <img src="/images/dental-implant.webp" alt="Cutaway illustration showing a crown above an abutment and a titanium implant anchored in the jawbone" width="900" height="830" loading="lazy" decoding="async"/>
       <figcaption><dl>{parts.map(([name, description]) => <div key={name}><dt>{name}</dt><dd>{description}</dd></div>)}</dl></figcaption>
     </figure>
   </section>;

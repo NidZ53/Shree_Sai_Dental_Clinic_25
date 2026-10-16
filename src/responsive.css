@@ -194,7 +194,7 @@ main ul,main ol{text-align:left}
 .technology .sectionHead>p{color:#c1cdd2;font-size:15px;line-height:1.8}
 .technology .techGrid{border:0;gap:22px;margin-top:48px;align-items:stretch}
 .technology .techGrid article{position:relative;isolation:isolate;overflow:hidden;border:1px solid #397c87;border-radius:12px;background:#08191f;box-shadow:0 0 18px #35d5d52b;min-height:300px;padding:136px 22px 24px;transition:border-color .25s,box-shadow .25s}
-.techArtwork{position:absolute;z-index:-2;inset:0;background-image:url('/images/technology-equipment.png');background-size:300% 200%;background-position:var(--art-x) var(--art-y);background-repeat:no-repeat}
+.techArtwork{position:absolute;z-index:-2;inset:0;background-image:url('/images/technology-equipment.webp');background-size:300% 200%;background-position:var(--art-x) var(--art-y);background-repeat:no-repeat}
 .technology .techGrid article::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(8,25,31,.05) 0%,rgba(8,25,31,.18) 32%,rgba(8,25,31,.91) 56%,#08191f 100%)}
 .technology .techGrid article>svg{position:absolute;top:24px;left:24px;width:22px;height:22px;margin:0;color:#86b9d1}
 .technology .techGrid h3{position:relative;margin:0 0 12px;font-size:24px;line-height:1.25;color:#fff}
@@ -262,3 +262,15 @@ main ul,main ol{text-align:left}
   .whyChooseCard h3{font-size:30px;margin-bottom:18px}
 }
 @media(prefers-reduced-motion:reduce){.whyChooseArrows button{transition:none}}
+
+/* A real portrait and restrained, consistent illustration framing. */
+.heroPortrait{margin:0;display:flex;flex-direction:column;overflow:hidden;border-radius:24px;background:var(--paper);border:1px solid var(--line);box-shadow:0 20px 50px #17242c0c;max-width:480px;justify-self:center;width:100%}
+.heroDoctor{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.heroPortrait figcaption{width:100%;padding:22px;background:var(--paper);border-top:1px solid var(--line)}
+.heroPortrait figcaption strong,.heroPortrait figcaption span{display:block}
+.heroPortrait figcaption strong{font-family:"Playfair Display",serif;font-size:24px}
+.heroPortrait figcaption span{margin-top:6px;font-size:12px;color:#596368;letter-spacing:.5px}
+.serviceGrid .serviceImage{width:100%;height:144px;padding:16px;object-fit:contain;background:#f0f5f6;border-radius:12px;mix-blend-mode:normal}
+.technology .techGrid article{box-shadow:none;border-color:#ffffff26}
+.technology .techGrid article:hover{box-shadow:none;border-color:#73bbd4}
+@media(max-width:640px){.heroPortrait{max-width:360px}.serviceGrid .serviceImage{height:130px}}

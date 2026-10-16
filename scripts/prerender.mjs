@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const env = loadEnv('production', process.cwd(), '');
-const configuredUrl = process.env.SITE_URL || env.SITE_URL;
+const configuredUrl = process.env.SITE_URL || env.SITE_URL || 'https://shree-sai-dental-clinic-25.vercel.app';
 let siteUrl;
 if (configuredUrl) {
   const parsed = new URL(configuredUrl);
@@ -49,13 +49,14 @@ try {
     if (siteUrl) {
       schema.url = siteUrl;
       schema['@id'] = siteUrl + '#clinic';
-      schema.image = new URL('/images/logo-white-transparent.png', siteUrl).href;
+      schema.image = new URL('/images/dr-dhiraj-zanwar-960.webp', siteUrl).href;
+      schema.logo = new URL('/images/logo-white-transparent.webp', siteUrl).href;
     }
     return '<script type="application/ld+json">' + JSON.stringify(schema).replace(/</g, '\\u003c') + '</script>';
   });
   let robots = 'User-agent: *\nAllow: /\n';
   if (siteUrl) {
-    html = html.replace('</head>', '<link rel="canonical" href="' + escape(siteUrl) + '"/><meta property="og:url" content="' + escape(siteUrl) + '"/></head>');
+    html = html.replace('</head>', '<meta property="og:image" content="' + escape(siteUrl + 'images/dr-dhiraj-zanwar-960.webp') + '"/><meta name="twitter:image" content="' + escape(siteUrl + 'images/dr-dhiraj-zanwar-960.webp') + '"/><link rel="canonical" href="' + escape(siteUrl) + '"/><meta property="og:url" content="' + escape(siteUrl) + '"/></head>');
 
     await writeFile('dist/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>' + escape(siteUrl) + '</loc></url><url><loc>' + escape(siteUrl + 'faqs/') + '</loc></url></urlset>\n');
     robots += 'Sitemap: ' + siteUrl + 'sitemap.xml\n';
@@ -75,7 +76,7 @@ try {
   // Update both social titles using the same page-specific value.
   faqHtml = faqHtml.replace(/(<meta name="twitter:title" content=")[^"]*/, '$1' + escape(faqTitle));
   if (siteUrl) {
-    faqHtml = faqHtml.replace('</head>', '<link rel="canonical" href="' + escape(siteUrl + 'faqs/') + '"/><meta property="og:url" content="' + escape(siteUrl + 'faqs/') + '"/></head>');
+    faqHtml = faqHtml.replace('</head>', '<meta property="og:image" content="' + escape(siteUrl + 'images/dr-dhiraj-zanwar-960.webp') + '"/><meta name="twitter:image" content="' + escape(siteUrl + 'images/dr-dhiraj-zanwar-960.webp') + '"/><link rel="canonical" href="' + escape(siteUrl + 'faqs/') + '"/><meta property="og:url" content="' + escape(siteUrl + 'faqs/') + '"/></head>');
   }
   if ((markup.match(/<details>/g) || []).length !== 5 || !markup.includes('href="/faqs/"') || (faqMarkup.match(/<details>/g) || []).length !== 17) throw new Error('FAQ page validation failed.');
   await mkdir('dist/faqs', { recursive: true });

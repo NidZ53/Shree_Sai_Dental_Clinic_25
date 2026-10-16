@@ -5,7 +5,7 @@ const navigation=[{"id":"about-us","label":"About Us"},{"id":"dental-services","
 
 export function SiteHeader({ homePrefix = '' }) {
   const [open, setOpen] = useState(false);
-  return <header><a className="brand" href={homePrefix+'#shree-sainath-hospital-dental-clinic'}><span className="clinicLogo"><img src="/images/logo-white-transparent.png" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="1774" height="887" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></a><nav>{navigation.map(({id,label})=><a key={id} href={homePrefix+'#'+id}>{label}</a>)}</nav><a className="call" href="tel:+917841882371"><Phone/>Call Us</a><button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="mobile-navigation" className="menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>{open&&<div id="mobile-navigation" className="mobile">{navigation.map(({id,label})=><a key={id} onClick={()=>setOpen(false)} href={homePrefix+'#'+id}>{label}</a>)}<a href="tel:+917841882371">Call Us</a></div>}</header>;
+  return <header><a className="brand" href={homePrefix+'#shree-sainath-hospital-dental-clinic'}><span className="clinicLogo"><img src="/images/logo-white-transparent.webp" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="400" height="200" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></a><nav>{navigation.map(({id,label})=><a key={id} href={homePrefix+'#'+id}>{label}</a>)}</nav><a className="call" href="tel:+917841882371"><Phone/>Call Us</a><button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="mobile-navigation" className="menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>{open&&<div id="mobile-navigation" className="mobile">{navigation.map(({id,label})=><a key={id} onClick={()=>setOpen(false)} href={homePrefix+'#'+id}>{label}</a>)}<a href="tel:+917841882371">Call Us</a></div>}</header>;
 }
 
 export function AppointmentSection() {
@@ -13,5 +13,5 @@ export function AppointmentSection() {
 }
 
 export function SiteFooter() {
-  return <footer className="foot"><div className="brand"><span className="clinicLogo"><img src="/images/logo-white-transparent.png" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="1774" height="887" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></div><p>Gentle, modern dentistry in Dhankawadi, Pune.</p><p>© 2026 Shree Sainath Hospital Dental Clinic. All rights reserved.</p></footer>;
+  return <footer className="foot"><div className="brand"><span className="clinicLogo"><img src="/images/logo-white-transparent.webp" alt="Dr. Zanwar&#39;s clinic logo: Say it with smile" width="400" height="200" decoding="async"/></span><span><b>SHREE SAINATH</b><small>HOSPITAL DENTAL CLINIC</small></span></div><p>Gentle, modern dentistry in Dhankawadi, Pune.</p><p>© 2026 Shree Sainath Hospital Dental Clinic. All rights reserved.</p></footer>;
 }
